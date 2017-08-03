@@ -6,6 +6,7 @@ import {
   NavLink,
 } from 'react-router-dom';
 
+import Modal from './package/';
 import Home from './scenes/Home';
 import Auth from './scenes/Auth';
 import './App.css';
@@ -29,6 +30,7 @@ class App extends React.Component {
             <Route path="/" exact component={Home} />
             <Route path="/auth" component={Auth} />
           </Switch>
+          <Modal />
         </div>
       </Router>
     );

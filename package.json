@@ -4,10 +4,13 @@
   "description": "",
   "keywords": [],
   "main": "lib/modal.min.js",
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "author": "Nghiệp<me@nghiepit.pro>",
   "homepage": "http://nghiepit.pro",
   "dependencies": {
+    "classnames": "^2.2.5",
     "prop-types": "^15.5.10",
     "ramda": "^0.24.1",
     "react": "^15.6.1",
@@ -69,8 +72,12 @@
     "test": "node scripts/test.js --env=jsdom"
   },
   "jest": {
-    "collectCoverageFrom": ["src/**/*.{js,jsx}"],
-    "setupFiles": ["<rootDir>/config/polyfills.js"],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}"
+    ],
+    "setupFiles": [
+      "<rootDir>/config/polyfills.js"
+    ],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.js?(x)",
       "<rootDir>/src/**/?(*.)(spec|test).js?(x)"
@@ -82,14 +89,24 @@
       "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
       "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
     },
-    "transformIgnorePatterns": ["[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"],
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
+    ],
     "moduleNameMapper": {
       "^react-native$": "react-native-web"
     },
-    "moduleFileExtensions": ["web.js", "js", "json", "web.jsx", "jsx"]
+    "moduleFileExtensions": [
+      "web.js",
+      "js",
+      "json",
+      "web.jsx",
+      "jsx"
+    ]
   },
   "babel": {
-    "presets": ["react-app"]
+    "presets": [
+      "react-app"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"
