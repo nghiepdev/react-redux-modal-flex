@@ -35,6 +35,8 @@ export default (state = initState, action) => {
         );
       }
       return assoc('show', false, state);
+    case actions.MODIFY_OK:
+      return assoc('ok', merge(state.ok, action.payload), state);
     default:
       return state;
   }

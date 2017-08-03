@@ -1,14 +1,8 @@
-@charset "UTF-8";
+import { injectGlobal } from 'styled-components';
 
-/*!
- * animate.css -http://daneden.me/animate
- * Version - 3.5.2
- * Licensed under the MIT license - http://opensource.org/licenses/MIT
- *
- * Copyright (c) 2017 Daniel Eden
- */
-
-.animated {
+// eslint-disable-next-line
+injectGlobal`
+  .animated {
   animation-duration: 1s;
   animation-fill-mode: both;
 }
@@ -56,3 +50,4 @@
 .zoomIn {
   animation-name: zoomIn;
 }
+`;

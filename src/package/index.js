@@ -1,5 +1,4 @@
-import './animate.css';
-import './style.css';
+import './styled';
 import Modal from './Modal';
 import reducers, { actions, selectors } from './modules';
 

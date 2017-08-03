@@ -16,10 +16,6 @@ class Auth extends React.Component {
                 title: 'Login',
                 animated: 'bounceIn',
                 component: LoginModal,
-                ok: {
-                  text: 'Login',
-                  disabled: true,
-                },
               })}
           >
             Login modal

@@ -21,6 +21,7 @@ const Wrapper = styled.div`
   left: 0px;
   overflow: hidden;
   z-index: 9999;
+  display: ${props => (props.show ? 'block' : 'none')};
 `;
 
 class Modal extends React.Component {
@@ -39,14 +40,26 @@ class Modal extends React.Component {
   };
 
   render() {
-    const { show, classWrap, animated, Component } = this.props;
+    const {
+      show,
+      classWrap,
+      animated,
+      Component,
+      toggleModal,
+      modifyOkModal,
+    } = this.props;
     return (
-      <Wrapper className={cls({ hide: !show })}>
+      <Wrapper show={show}>
         <Content
           className={cls('animated', classWrap, animated)}
           {...this.props}
         >
-          {is(Function, Component) ? <Component /> : null}
+          {show && is(Function, Component)
+            ? <Component
+                toggleModal={toggleModal}
+                modifyOkModal={modifyOkModal}
+              />
+            : null}
         </Content>
       </Wrapper>
     );
@@ -74,5 +87,5 @@ export default connect(
       ModalSelectors
     )
   ),
-  pick(['toggleModal'], ModalActions)
+  pick(['toggleModal', 'modifyOkModal'], ModalActions)
 )(Modal);

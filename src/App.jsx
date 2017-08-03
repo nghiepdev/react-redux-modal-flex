@@ -25,6 +25,14 @@ class App extends React.Component {
             <li>
               <NavLink to="/auth">Auth</NavLink>
             </li>
+            <li>
+              <a
+                href="https://github.com/tronghiep92/react-redux-modal-flex.git"
+                ref="noopener noreferrer"
+              >
+                Modal React Redux
+              </a>
+            </li>
           </ul>
           <Switch>
             <Route path="/" exact component={Home} />

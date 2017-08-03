@@ -14,7 +14,7 @@ const Wrapper = styled.span`
     color: #6d7379;
   }
   &.primary {
-    color: #00a1f2;
+    color: #fc4a4a;
   }
   &.isDisabled {
     color: #00a1f2;

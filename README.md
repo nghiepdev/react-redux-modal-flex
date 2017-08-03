@@ -10,12 +10,14 @@ Accessible modal dialog component for React Redux
 ## Installation
 To install the stable version you can use:
 
-`$ yarn add react-redux-modal-flex`
+```sh
+$ yarn add react-redux-modal-flex
+```
 
 ## Usage
 ### Step 1:
 `rootReducer.js`
-```
+```js
 import { combineReducers } from 'redux';
 import {reducers as modal} from 'react-redux-modal-flex';
 import todos from './todos';
@@ -28,8 +30,8 @@ export default combineReducers({
 
 ### Step 2:
 `App.js`
-```
-import Modal from 'react-redux-modal-flex';
+```jsx
+import Modal from "react-redux-modal-flex";
 
 class App extends React.Component {
   render() {
@@ -49,10 +51,62 @@ class App extends React.Component {
 ```
 
 ### Step 3:
-`Any Component you want to use`
+`Any Container you want to use`
+```jsx
+import { connect } from "react-redux";
+import { actions as ModalActions } from "react-redux-modal-flex";
+
+class LoginModal extends React.Component {
+  render() {
+    return (
+      <form>
+        <div>
+          <label>Username</label>
+          <input type="text" name="username" />
+        </div>
+        <div>
+          <label>Password</label>
+          <input type="password" name="password" />
+        </div>
+      </form>
+    );
+  }
+}
+
+class Auth extends React.Component {
+  render() {
+    return (
+      <div>
+        <h3>Auth</h3>
+        <button
+          onClick={() =>
+            this.props.toggleModal({
+              component: LoginModal,
+              ok: {
+                text: "Login",
+                action: () => alert("submit form")
+              }
+            })}
+        >
+          Open modal login
+        </button>
+      </div>
+    );
+  }
+}
+
+export default connect(null, { toggleModal: ModalActions.toggleModal })(Auth);
+
 ```
-import Modal from 'react-redux-modal-flex';
-```
+
+## API
+api here
+
+## For Contributor
+The main package in `src/package`
+
+## Testing
+Welcome contributor :)
 
 ## License
 MIT © [Nghiệp](http://nghiepit.pro)
