@@ -1,8 +1,8 @@
 {
   "name": "react-redux-modal-flex",
   "version": "0.1.0",
-  "description": "",
-  "keywords": [],
+  "description": "Accessible modal dialog component for React Redux, Easy to install and use with Redux",
+  "keywords": ["react", "redux", "modal", "popup", "flex", "animate"],
   "main": "lib/modal.min.js",
   "files": ["lib"],
   "author": "Nghiệp<me@nghiepit.pro>",
