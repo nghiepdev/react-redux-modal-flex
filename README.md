@@ -28,7 +28,7 @@ import todos from './todos';
 
 export default combineReducers({
   todos,
-  modal
+  modal: modal({/* default initial state, see below in API */})
 });
 ```
 
@@ -103,7 +103,7 @@ export default connect(null, { toggleModal: ModalActions.toggleModal })(Auth);
 ```
 
 ## API
-- initState
+- initState: you can overwrite default initial state
 ```js
 const initState = {
   classContent: 'modal-content',
@@ -126,13 +126,26 @@ const initState = {
 
 - API
 ```js
-import Modal, { reducer as modal, actions as ModalActions, selectors as ModalSelectors};
+import Modal, { 
+  reducer as modal,
+  actions as ModalActions,
+  selectors as ModalSelectors
+} from 'react-redux-modal-flex';
 const {toggleModal, modifyOkModal} = ModalActions;
 ```
 - `<Modal />` is component, using in our `App.js`
-- `reducer` using in our `rootReducer.js`
-- `ModalSelectors` is state of modal
+- `reducer` using in our `rootReducer.js` you can custom default initial state
+```js
+export default combineReducers({
+  todos,
+  modal: modal({
+    textCancel: 'Close',
+    title: 'My default title'
+  })
+});
+```
 - `toggleModal` and `modifyOkModal` is action
+- `ModalSelectors` is state of modal(You will probably never use it)
 
 ## Usage
 - Open Modal by action `toggleModal(options)`
