@@ -1,8 +1,8 @@
 {
   "name": "react-redux-modal-flex",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Accessible modal dialog component for React Redux, Easy to install and use with Redux",
-  "keywords": ["react", "redux", "modal", "popup", "flex", "animate"],
+  "keywords": ["react", "redux", "modal", "popup", "dialog", "animate"],
   "main": "lib/modal.min.js",
   "files": ["lib"],
   "author": "Nghiệp<me@nghiepit.pro>",
@@ -70,7 +70,8 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
     "lib": "cross-env NODE_ENV=production ./node_modules/.bin/webpack --config config/webpack.lib.config.js --progress --profile",
-    "prepare": "npm run lib"
+    "prepare": "npm run lib",
+    "surge": "npm run build && cp build/index.html build/200.html && surge build --domain react-redux-modal-flex.surge.sh"
   },
   "jest": {
     "collectCoverageFrom": ["src/**/*.{js,jsx}"],

@@ -6,8 +6,9 @@ import ModalDefault from '../components/ModalDefault';
 
 const initState = {
   show: false,
-  classWrap: 'react-redux-modal-flex',
-  animated: 'zoomIn',
+  classContent: 'modal-content',
+  animation: 'zoomIn',
+  duration: 300,
   mask: true,
   closeByMask: true,
   component: ModalDefault,
@@ -16,6 +17,7 @@ const initState = {
   textCancel: 'Cancel',
   ok: {
     text: 'OK',
+    classOk: 'modal-btn-ok',
     disabled: false,
     action: () => console.log('OK clicked'),
   },

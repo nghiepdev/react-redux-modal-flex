@@ -16,47 +16,49 @@ const Wrapper = styled.section`
   justify-content: center;
   align-items: center;
   background: ${props => (props.mask ? 'rgba(0, 0, 0, 0.6)' : 'transparent')};
-  animation-duration: .2s;
-  & > div {
+  animation-duration: .1s;
+  & > div.animated {
     display: flex;
     flex-direction: column;
     background: #fff;
     border-radius: 3px;
     border: 1px solid #ebebee;
-    animation-duration: .3s;
+    animation-duration: ${props => props.duration}ms;
   }
 `;
 
 class Content extends React.Component {
   static propTypes = {
-    children: PropTypes.node,
     mask: PropTypes.bool.isRequired,
     className: PropTypes.string.isRequired,
+    children: PropTypes.node,
     isFooter: PropTypes.bool.isRequired,
+    duration: PropTypes.number.isRequired,
     toggleModal: PropTypes.func.isRequired,
   };
 
   onClick = ({ target }) => {
     const { mask, closeByMask, toggleModal } = this.props;
-    if (mask && closeByMask && /overlay-close/i.test(target.className)) {
+    if (mask && closeByMask && /modal-overlay/i.test(target.className)) {
       toggleModal(false);
     }
   };
 
   render() {
-    const { mask, className, children, isFooter } = this.props;
+    const { mask, className, children, isFooter, duration } = this.props;
     return (
       <Wrapper
-        className="animated fadeIn overlay-close"
+        className="animated fadeIn modal-overlay"
         onClick={this.onClick}
         mask={mask}
+        duration={duration}
       >
         <div className={className}>
           <Header {...this.props} />
           <Main>
             {children}
           </Main>
-          {isFooter ? <Footer {...this.props} /> : null}
+          {isFooter && <Footer {...this.props} />}
         </div>
       </Wrapper>
     );

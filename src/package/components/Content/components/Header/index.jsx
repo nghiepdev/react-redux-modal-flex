@@ -13,12 +13,38 @@ const Wrapper = styled.h4`
   text-align: left;
 `;
 
-const Close = styled.i`
+const Close = styled.span`
   position: absolute;
   top: 50%;
   right: 3px;
   transform: translateY(-50%);
   cursor: pointer;
+  right: 5px;
+  width: 16px;
+  height: 16px;
+  &:before,
+  &:after {
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    background: #999;
+    border-radius: 100%;
+    transition: background .2s;
+  }
+  &:before {
+    transform: rotate(45deg);
+  }
+  &:after {
+    transform: rotate(-45deg);
+  }
+  &:hover:before,
+  &:hover:after {
+    background: #333;
+  }
 `;
 
 const Header = ({ title, toggleModal, closeBtn }) =>
@@ -26,9 +52,7 @@ const Header = ({ title, toggleModal, closeBtn }) =>
     <span>
       {title}
     </span>
-    {closeBtn
-      ? <Close onClick={() => toggleModal(false)}>&#x2715;</Close>
-      : null}
+    {closeBtn && <Close onClick={() => toggleModal(false)} />}
   </Wrapper>;
 
 Header.propTypes = {

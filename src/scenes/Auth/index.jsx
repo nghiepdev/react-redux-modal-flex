@@ -14,7 +14,8 @@ class Auth extends React.Component {
             onClick={() =>
               this.props.toggleModal({
                 title: 'Login',
-                animated: 'bounceIn',
+                animation: 'bounceIn',
+                duration: 750,
                 component: LoginModal,
               })}
           >

@@ -12,26 +12,38 @@ const Wrapper = styled.footer`
   justify-content: flex-end;
 `;
 
-const Footer = ({ textOk, textCancel, toggleModal, disabledOk, actionOk }) =>
+const Footer = ({
+  textOk,
+  classOk,
+  textCancel,
+  toggleModal,
+  disabledOk,
+  actionOk,
+}) =>
   <Wrapper>
-    {textCancel
-      ? <Button onClick={() => toggleModal(false)}>
-          {textCancel}
-        </Button>
-      : null}
-    {textOk
-      ? <Button primary isDisabled={disabledOk} onClick={() => actionOk()}>
-          {textOk}
-        </Button>
-      : null}
+    {textCancel &&
+      <Button onClick={() => toggleModal(false)}>
+        {textCancel}
+      </Button>}
+    {textOk &&
+      <Button
+        primary
+        isDisabled={disabledOk}
+        onClick={() => actionOk()}
+        className={classOk}
+      >
+        {textOk}
+      </Button>}
   </Wrapper>;
 
 Footer.propTypes = {
   textOk: PropTypes.string.isRequired,
+  classOk: PropTypes.string.isRequired,
   textCancel: PropTypes.string.isRequired,
   toggleModal: PropTypes.func.isRequired,
   actionOk: PropTypes.func.isRequired,
   disabledOk: PropTypes.bool.isRequired,
+  className: PropTypes.string.isRequired,
 };
 
 export default Footer;

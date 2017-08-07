@@ -27,23 +27,29 @@ const Wrapper = styled.div`
 class Modal extends React.Component {
   static propTypes = {
     show: PropTypes.bool.isRequired,
-    toggleModal: PropTypes.func.isRequired,
     Component: PropTypes.func,
-    closeBtn: PropTypes.bool.isRequired,
-    isFooter: PropTypes.bool.isRequired,
+    classContent: PropTypes.string.isRequired,
+    animation: PropTypes.string.isRequired,
+    duration: PropTypes.number.isRequired,
     mask: PropTypes.bool.isRequired,
     closeByMask: PropTypes.bool.isRequired,
-    textOk: PropTypes.string,
+    title: PropTypes.string.isRequired,
+    closeBtn: PropTypes.bool.isRequired,
+    textOk: PropTypes.string.isRequired,
+    classOk: PropTypes.string.isRequired,
     actionOk: PropTypes.func.isRequired,
     disabledOk: PropTypes.bool,
     textCancel: PropTypes.string,
+    isFooter: PropTypes.bool.isRequired,
+    toggleModal: PropTypes.func.isRequired,
+    modifyOkModal: PropTypes.func.isRequired,
   };
 
   render() {
     const {
       show,
-      classWrap,
-      animated,
+      classContent,
+      animation,
       Component,
       toggleModal,
       modifyOkModal,
@@ -51,15 +57,15 @@ class Modal extends React.Component {
     return (
       <Wrapper show={show}>
         <Content
-          className={cls('animated', classWrap, animated)}
+          className={cls('animated', classContent, animation)}
           {...this.props}
         >
-          {show && is(Function, Component)
-            ? <Component
-                toggleModal={toggleModal}
-                modifyOkModal={modifyOkModal}
-              />
-            : null}
+          {show &&
+            is(Function, Component) &&
+            <Component
+              toggleModal={toggleModal}
+              modifyOkModal={modifyOkModal}
+            />}
         </Content>
       </Wrapper>
     );
@@ -71,14 +77,16 @@ export default connect(
     pick(
       [
         'show',
-        'classWrap',
-        'animated',
+        'Component',
+        'classContent',
+        'animation',
+        'duration',
         'mask',
         'closeByMask',
         'title',
-        'Component',
         'closeBtn',
         'textOk',
+        'classOk',
         'actionOk',
         'disabledOk',
         'textCancel',

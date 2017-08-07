@@ -4,9 +4,11 @@ export const modal = state => state.modal;
 
 export const show = createSelector(modal, modal => modal.show);
 
-export const classWrap = createSelector(modal, modal => modal.classWrap);
+export const classContent = createSelector(modal, modal => modal.classContent);
 
-export const animated = createSelector(modal, modal => modal.animated);
+export const animation = createSelector(modal, modal => modal.animation);
+
+export const duration = createSelector(modal, modal => modal.duration);
 
 export const mask = createSelector(modal, modal => modal.mask);
 
@@ -23,6 +25,8 @@ export const textCancel = createSelector(modal, modal => modal.textCancel);
 export const ok = createSelector(modal, modal => modal.ok);
 
 export const textOk = createSelector(ok, ok => ok.text);
+
+export const classOk = createSelector(ok, ok => ok.classOk);
 
 export const actionOk = createSelector(ok, ok => ok.action);
 

@@ -9,6 +9,7 @@ const Wrapper = styled.span`
   cursor: pointer;
   padding: 8px 12px;
   text-transform: uppercase;
+  transition: all .2s;
   &:hover {
     background: #f2fbff;
     color: #6d7379;
@@ -24,8 +25,11 @@ const Wrapper = styled.span`
   }
 `;
 
-const Button = ({ children, isDisabled, onClick, primary }) =>
-  <Wrapper className={cls({ isDisabled, primary })} onClick={onClick}>
+const Button = ({ children, isDisabled, onClick, primary, className }) =>
+  <Wrapper
+    className={cls(className, { isDisabled, primary })}
+    onClick={onClick}
+  >
     {children}
   </Wrapper>;
 
@@ -34,6 +38,7 @@ Button.propTypes = {
   primary: PropTypes.bool,
   isDisabled: PropTypes.bool,
   onClick: PropTypes.func,
+  className: PropTypes.string,
 };
 
 export default Button;

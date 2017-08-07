@@ -1,11 +1,15 @@
 # REACT-REDUX-MODAL-FLEX
-Accessible modal dialog component for React Redux, Easy to install and use with Redux
+Accessible modal dialog component for React, easy to install and use with Redux.
 
 [![NPM version](https://img.shields.io/npm/v/react-redux-modal-flex.svg)](https://www.npmjs.com/package/react-redux-modal-flex)
 [![NPM monthly download](https://img.shields.io/npm/dm/react-redux-modal-flex.svg)](https://www.npmjs.com/package/react-redux-modal-flex)
 
 ## Demo
 [http://react-redux-modal-flex.surge.sh/](http://react-redux-modal-flex.surge.sh/)
+
+## Features
+- Integration Redux
+- Easy custom `animate` effect with [Animate.css](https://daneden.github.io/animate.css/)
 
 ## Installation
 To install the stable version you can use:
@@ -51,7 +55,7 @@ class App extends React.Component {
 ```
 
 ### Step 3:
-`Any Container you want to use`
+Any `Container` you want to use
 ```jsx
 import { connect } from "react-redux";
 import { actions as ModalActions } from "react-redux-modal-flex";
@@ -98,14 +102,13 @@ class Auth extends React.Component {
 export default connect(null, { toggleModal: ModalActions.toggleModal })(Auth);
 ```
 
-## Usage
-
+## API
 - initState
 ```js
 const initState = {
-  show: false,
-  classWrap: 'react-redux-modal-flex',
-  animated: 'zoomIn',
+  classContent: 'modal-content',
+  animation: 'zoomIn',
+  duration: 300,
   mask: true,
   closeByMask: true,
   component: ModalDefault,
@@ -114,11 +117,24 @@ const initState = {
   textCancel: 'Cancel',
   ok: {
     text: 'OK',
+    classOk: 'modal-btn-ok',
     disabled: false,
     action: () => console.log('OK clicked'),
   },
 };
 ```
+
+- API
+```js
+import Modal, { reducer as modal, actions as ModalActions, selectors as ModalSelectors};
+const {toggleModal, modifyOkModal} = ModalActions;
+```
+- `<Modal />` is component, using in our `App.js`
+- `reducer` using in our `rootReducer.js`
+- `ModalSelectors` is state of modal
+- `toggleModal` and `modifyOkModal` is action
+
+## Usage
 - Open Modal by action `toggleModal(options)`
     - `options`: is object and look like the `initState` above
     - Example:
@@ -152,26 +168,12 @@ const initState = {
 - Hide button `Cancel` with `textCancel: null`
 - Hide button `Ok` with `ok: {text: null}`
 - Hide Footer if the `Cancel` and `Ok` is hidden 
-- Easy custom `animate` effect with `Animate.css`
-
-## API
-```js
-import Modal, { reducer as modal, actions as ModalActions, selectors as ModalSelectors};
-const {toggleModal, modifyOkModal} = ModalActions;
-```
-- `<Modal />` is component, using in our `App.js`
-- `reducer` using in our `rootReducer.js`
-- `ModalSelectors` is state of modal
-- `toggleModal` and `modifyOkModal` is action
 
 ## Contributing
 The main package in `src/package`
 
 ## Testing
 Welcome contributing :)
-
-## Reference
-- [Animate.css](https://daneden.github.io/animate.css/)
 
 ## License
 MIT © [Nghiệp](http://nghiepit.pro)
