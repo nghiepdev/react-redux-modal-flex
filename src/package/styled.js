@@ -23,19 +23,6 @@ injectGlobal`
   animation-name: fadeIn;
 }
 
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
-}
-.fadeOut {
-  animation-name: fadeOut;
-}
-
 @keyframes zoomIn {
   from {
     opacity: 0;
@@ -48,23 +35,5 @@ injectGlobal`
 }
 .zoomIn {
   animation-name: zoomIn;
-}
-
-@keyframes zoomOut {
-  from {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-    transform: scale3d(.3, .3, .3);
-  }
-
-  to {
-    opacity: 0;
-  }
-}
-.zoomOut {
-  animation-name: zoomOut;
 }
 `;
