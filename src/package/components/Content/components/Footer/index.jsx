@@ -6,7 +6,7 @@ import Button from './components/Button';
 
 const Wrapper = styled.footer`
   margin-top: auto;
-  padding: 15px 10px;
+  padding: 10px;
   border-top: 1px solid #e5e5e9;
   display: flex;
   justify-content: flex-end;

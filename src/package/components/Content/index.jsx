@@ -16,7 +16,7 @@ const Wrapper = styled.section`
   justify-content: center;
   align-items: center;
   background: ${props => (props.mask ? 'rgba(0, 0, 0, 0.6)' : 'transparent')};
-  animation-duration: .1s;
+  animation-duration: .2s;
   & > div.animated {
     display: flex;
     flex-direction: column;

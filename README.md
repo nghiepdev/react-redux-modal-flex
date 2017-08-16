@@ -9,7 +9,7 @@ Accessible modal dialog component for React, easy to install and use with Redux.
 
 ## Features
 - Integration Redux
-- Easy custom `animate` effect with [Animate.css](https://daneden.github.io/animate.css/)
+- Easy custom `animation` effect with [Animate.css](https://daneden.github.io/animate.css/)
 
 ## Installation
 To install the stable version you can use:
