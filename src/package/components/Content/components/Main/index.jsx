@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Wrapper = styled.section`
-  min-width: 350px;
-  min-height: 200px;
-  max-width: 90vw;
-  max-height: 80vh;
+  max-width: 100%;
+  > * {
+    box-sizing: border-box;
+    max-width: 100%;
+  }
 `;
 
 const Main = ({ children }) =>

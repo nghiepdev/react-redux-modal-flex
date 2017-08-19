@@ -1,6 +1,6 @@
 {
   "name": "react-redux-modal-flex",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Accessible modal dialog component for React Redux, Easy to install and use with Redux",
   "keywords": [
     "react",

@@ -15,14 +15,19 @@ const Wrapper = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: ${props => (props.mask ? 'rgba(0, 0, 0, 0.6)' : 'transparent')};
+  background: ${props => (props.mask ? 'rgba(0, 0, 0, 0.5)' : 'transparent')};
   animation-duration: .2s;
   & > div.animated {
     display: flex;
     flex-direction: column;
+    min-width: 320px;
+    min-height: 200px;
+    max-width: 90vw;
+    max-height: 80vh;
     background: #fff;
-    border-radius: 3px;
+    border-radius: 2px;
     border: 1px solid #ebebee;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
     animation-duration: ${props => props.duration}ms;
   }
 `;
