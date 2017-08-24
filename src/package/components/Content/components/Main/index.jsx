@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 const Wrapper = styled.section`
   max-width: 100%;
+  padding: 0px 10px;
   > * {
     box-sizing: border-box;
     max-width: 100%;

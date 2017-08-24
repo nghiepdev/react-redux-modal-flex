@@ -51,6 +51,7 @@ class Content extends React.Component {
 
   render() {
     const { mask, className, children, isFooter, duration } = this.props;
+
     return (
       <Wrapper
         className="animated fadeIn modal-overlay"

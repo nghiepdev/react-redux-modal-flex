@@ -54,6 +54,7 @@ class Modal extends React.Component {
       toggleModal,
       modifyOkModal,
     } = this.props;
+
     return (
       <Wrapper show={show}>
         <Content

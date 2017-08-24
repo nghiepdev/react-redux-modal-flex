@@ -1,6 +1,24 @@
 import React from 'react';
 
-const ModalSample = () =>
-  <div style={{ padding: '20px', width: '500px' }}>My modal popup</div>;
+class ModalSample extends React.Component {
+  state = {
+    style: {
+      padding: '20px 0px',
+      width: '500px',
+    },
+  };
+
+  static defaultProps = {
+    content: 'My modal popup',
+  };
+
+  render() {
+    return (
+      <div style={this.state.style}>
+        {this.props.content}
+      </div>
+    );
+  }
+}
 
 export default ModalSample;
