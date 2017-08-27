@@ -18,10 +18,8 @@ const Wrapper = styled.span`
     color: #fc4a4a;
   }
   &.isDisabled {
-    color: #00a1f2;
     pointer-events: none;
     opacity: 0.6;
-    margin-left: 15px;
   }
 `;
 
