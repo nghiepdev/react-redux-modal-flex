@@ -62,11 +62,12 @@ class Modal extends React.Component {
           {...this.props}
         >
           {show &&
-            is(Function, Component) &&
+          is(Function, Component) && (
             <Component
               toggleModal={toggleModal}
               modifyOkModal={modifyOkModal}
-            />}
+            />
+          )}
         </Content>
       </Wrapper>
     );

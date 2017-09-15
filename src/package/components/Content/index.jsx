@@ -16,18 +16,18 @@ const Wrapper = styled.section`
   justify-content: center;
   align-items: center;
   background: ${props => (props.mask ? 'rgba(0, 0, 0, 0.5)' : 'transparent')};
-  animation-duration: .2s;
+  animation-duration: 0.2s;
   & > div.animated {
     display: flex;
     flex-direction: column;
     min-width: 320px;
     min-height: 200px;
-    max-width: 90vw;
+    max-width: 95vw;
     max-height: 80vh;
     background: #fff;
     border-radius: 2px;
     border: 1px solid #ebebee;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
     animation-duration: ${props => props.duration}ms;
   }
 `;
@@ -61,9 +61,7 @@ class Content extends React.Component {
       >
         <div className={className}>
           <Header {...this.props} />
-          <Main>
-            {children}
-          </Main>
+          <Main>{children}</Main>
           {isFooter && <Footer {...this.props} />}
         </div>
       </Wrapper>

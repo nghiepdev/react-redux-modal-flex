@@ -33,7 +33,7 @@ const Close = styled.span`
     margin-top: -1px;
     background: #999;
     border-radius: 100%;
-    transition: background .2s;
+    transition: background 0.2s;
   }
   &:before {
     transform: rotate(45deg);
@@ -47,13 +47,12 @@ const Close = styled.span`
   }
 `;
 
-const Header = ({ title, toggleModal, closeBtn }) =>
+const Header = ({ title, toggleModal, closeBtn }) => (
   <Wrapper>
-    <span>
-      {title}
-    </span>
+    <span>{title}</span>
     {closeBtn && <Close onClick={() => toggleModal(false)} />}
-  </Wrapper>;
+  </Wrapper>
+);
 
 Header.propTypes = {
   title: PropTypes.string.isRequired,

@@ -11,10 +11,7 @@ const Wrapper = styled.section`
   }
 `;
 
-const Main = ({ children }) =>
-  <Wrapper>
-    {children}
-  </Wrapper>;
+const Main = ({ children }) => <Wrapper>{children}</Wrapper>;
 
 Main.propTypes = {
   children: PropTypes.node,

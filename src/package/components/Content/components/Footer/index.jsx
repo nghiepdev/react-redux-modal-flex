@@ -19,13 +19,12 @@ const Footer = ({
   toggleModal,
   disabledOk,
   actionOk,
-}) =>
+}) => (
   <Wrapper>
-    {textCancel &&
-      <Button onClick={() => toggleModal(false)}>
-        {textCancel}
-      </Button>}
-    {textOk &&
+    {textCancel && (
+      <Button onClick={() => toggleModal(false)}>{textCancel}</Button>
+    )}
+    {textOk && (
       <Button
         primary
         isDisabled={disabledOk}
@@ -33,8 +32,10 @@ const Footer = ({
         className={classOk}
       >
         {textOk}
-      </Button>}
-  </Wrapper>;
+      </Button>
+    )}
+  </Wrapper>
+);
 
 Footer.propTypes = {
   textOk: PropTypes.string.isRequired,

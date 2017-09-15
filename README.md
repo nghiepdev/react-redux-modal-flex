@@ -28,7 +28,13 @@ import todos from './todos';
 
 export default combineReducers({
   todos,
-  modal: modal({/* default initial state, see below in API */})
+  modal: modal({
+    classContent: 'modal-content',
+    animation: 'zoomIn',
+    duration: 200,
+    mask: true,
+    /* default initial state, see below in API */
+  })
 });
 ```
 

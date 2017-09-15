@@ -13,11 +13,7 @@ class ModalSample extends React.Component {
   };
 
   render() {
-    return (
-      <div style={this.state.style}>
-        {this.props.content}
-      </div>
-    );
+    return <div style={this.state.style}>{this.props.content}</div>;
   }
 }
 

@@ -9,7 +9,7 @@ const Wrapper = styled.span`
   cursor: pointer;
   padding: 8px 12px;
   text-transform: uppercase;
-  transition: all .2s;
+  transition: all 0.2s;
   &:hover {
     background: #f2fbff;
     color: #6d7379;
@@ -23,13 +23,14 @@ const Wrapper = styled.span`
   }
 `;
 
-const Button = ({ children, isDisabled, onClick, primary, className }) =>
+const Button = ({ children, isDisabled, onClick, primary, className }) => (
   <Wrapper
     className={cls(className, { isDisabled, primary })}
     onClick={onClick}
   >
     {children}
-  </Wrapper>;
+  </Wrapper>
+);
 
 Button.propTypes = {
   children: PropTypes.node.isRequired,
