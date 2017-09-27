@@ -1,6 +1,6 @@
 {
   "name": "react-redux-modal-flex",
-  "version": "0.1.10",
+  "version": "1.0.0",
   "description":
     "Accessible modal dialog component for React Redux, Easy to install and use with Redux",
   "keywords": [
@@ -20,8 +20,8 @@
     "classnames": "^2.2.5",
     "prop-types": "^15.5.10",
     "ramda": "^0.24.1",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
     "react-redux": "^5.0.5",
     "react-router-dom": "^4.1.2",
     "redux": "^3.7.2",
@@ -69,9 +69,9 @@
     "whatwg-fetch": "2.0.3"
   },
   "peerDependencies": {
-    "prop-types": "^15.0.0",
-    "react": "^15.0.0",
-    "react-dom": "^15.0.0",
+    "prop-types": "^15.0.0 || ^16.0.0",
+    "react": "^15.0.0 || ^16.0.0",
+    "react-dom": "^15.0.0 || ^16.0.0",
     "redux": "^3.0.0"
   },
   "scripts": {

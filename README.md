@@ -191,8 +191,5 @@ export default combineReducers({
 ## Contributing
 The main package in `src/package`
 
-## Testing
-Welcome contributing :)
-
 ## License
 MIT © [Nghiệp](http://nghiepit.pro)
