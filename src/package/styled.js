@@ -3,8 +3,10 @@ import { injectGlobal } from 'styled-components';
 // eslint-disable-next-line
 injectGlobal`
   .animated {
-  animation-fill-mode: both;
-}
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    will-change: transform, opacity;
+  }
 
 .animated.infinite {
   animation-iteration-count: infinite;

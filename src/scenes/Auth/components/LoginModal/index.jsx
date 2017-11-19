@@ -54,7 +54,7 @@ class LoginModal extends React.Component {
   render() {
     return (
       <Form action="">
-        <h3>Validation form before enable Login button</h3>
+        <h3>Validation form</h3>
         <div>
           <label htmlFor="username">Username: </label>
           <input
