@@ -47,12 +47,13 @@ const Close = styled.span`
   }
 `;
 
-const Header = ({ title, toggleModal, closeBtn }) => (
-  <Wrapper>
-    <span>{title}</span>
-    {closeBtn && <Close onClick={() => toggleModal(false)} />}
-  </Wrapper>
-);
+const Header = ({ title, toggleModal, closeBtn }) =>
+  title && (
+    <Wrapper>
+      <span>{title}</span>
+      {closeBtn && <Close onClick={() => toggleModal(false)} />}
+    </Wrapper>
+  );
 
 Header.propTypes = {
   title: PropTypes.string.isRequired,

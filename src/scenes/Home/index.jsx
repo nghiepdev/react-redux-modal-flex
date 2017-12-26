@@ -18,7 +18,8 @@ class Home extends React.Component {
               ok: {
                 action: () => alert('Ok clicked'),
               },
-            })}
+            })
+          }
         >
           Open modal sample
         </button>

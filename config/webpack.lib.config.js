@@ -9,7 +9,7 @@ module.exports = {
     'modal.min': './src/package/index.js',
   },
 
-  externals: ['react', 'react-dom', 'prop-types', 'redux'],
+  externals: ['react', 'react-dom', 'prop-types', 'redux', 'react-redux'],
 
   output: {
     filename: '[name].js',
