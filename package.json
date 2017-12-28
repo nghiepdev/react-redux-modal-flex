@@ -1,10 +1,10 @@
 {
   "name": "react-redux-modal-flex",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Make easy a modal/popup with Redux",
   "author": "Nghiệp<me@nghiepit.pro>",
   "homepage": "http://react-redux-modal-flex.surge.sh",
-  "main": "lib/index.js",
+  "main": "index.min.js",
   "files": ["lib"],
   "dependencies": {
     "classnames": "^2.2.5",
@@ -40,7 +40,8 @@
   },
   "scripts": {
     "dev": "./node_modules/.bin/webpack-dev-server",
-    "lib": "./node_modules/.bin/babel src --out-dir lib",
+    "lib":
+      "cross-env NODE_ENV=production ./node_modules/.bin/webpack --config webpack.lib.config.js --progress --profile -p",
     "build":
       "cross-env NODE_ENV=production ./node_modules/.bin/webpack --progress --profile -p",
     "demo":
