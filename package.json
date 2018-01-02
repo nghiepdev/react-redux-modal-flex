@@ -1,11 +1,13 @@
 {
   "name": "react-redux-modal-flex",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Make easy a modal/popup with Redux",
   "author": "Nghiệp<me@nghiepit.pro>",
   "homepage": "http://react-redux-modal-flex.surge.sh",
   "main": "index.min.js",
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.6.0",
@@ -40,19 +42,16 @@
   },
   "scripts": {
     "dev": "./node_modules/.bin/webpack-dev-server",
-    "lib":
-      "cross-env NODE_ENV=production ./node_modules/.bin/webpack --config webpack.lib.config.js --progress --profile -p",
-    "build":
-      "cross-env NODE_ENV=production ./node_modules/.bin/webpack --progress --profile -p",
-    "demo":
-      "npm run build && mv bundle.js examples/ && surge examples --domain react-redux-modal-flex.surge.sh"
+    "lib": "cross-env NODE_ENV=production ./node_modules/.bin/webpack --config webpack.lib.config.js --progress --profile -p",
+    "build": "cross-env NODE_ENV=production ./node_modules/.bin/webpack --progress --profile -p",
+    "demo": "npm run build && mv bundle.js examples/ && surge examples --domain react-redux-modal-flex.surge.sh"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tronghiep92/react-redux-modal-flex.git"
+    "url": "git+https://github.com/nghiepit/react-redux-modal-flex.git"
   },
   "bugs": {
-    "url": "https://github.com/tronghiep92/react-redux-modal-flex/issues"
+    "url": "https://github.com/nghiepit/react-redux-modal-flex/issues"
   },
   "keywords": [
     "react",
