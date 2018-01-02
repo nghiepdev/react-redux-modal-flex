@@ -1,6 +1,6 @@
 {
   "name": "react-redux-modal-flex",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Make easy a modal/popup with Redux",
   "author": "Nghiệp<me@nghiepit.pro>",
   "homepage": "http://react-redux-modal-flex.surge.sh",
@@ -44,7 +44,8 @@
     "dev": "./node_modules/.bin/webpack-dev-server",
     "lib": "cross-env NODE_ENV=production ./node_modules/.bin/webpack --config webpack.lib.config.js --progress --profile -p",
     "build": "cross-env NODE_ENV=production ./node_modules/.bin/webpack --progress --profile -p",
-    "demo": "npm run build && mv bundle.js examples/ && surge examples --domain react-redux-modal-flex.surge.sh"
+    "demo": "npm run build && mv bundle.js examples/ && surge examples --domain react-redux-modal-flex.surge.sh",
+    "prepublish": "npm run lib"
   },
   "repository": {
     "type": "git",
