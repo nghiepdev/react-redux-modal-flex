@@ -15,7 +15,7 @@ const Wrapper = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: ${props => (props.isMask ? 'rgba(0, 0, 0, 0.5)' : 'transparent')};
+  background: rgba(0, 0, 0, 0.5);
   animation-duration: 0.2s;
   & > div.animated {
     display: flex;
@@ -56,7 +56,6 @@ class Content extends React.Component {
       <Wrapper
         className="animated fadeIn modal-overlay"
         onClick={this.onClick}
-        isMask={mask}
         duration={duration}
       >
         <div className={className}>
