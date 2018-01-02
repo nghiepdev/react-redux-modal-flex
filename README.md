@@ -204,10 +204,10 @@ onClick={() => this.props.modifyOkModal({
 })}
 ```
 
-* Hide `Header` if the `title` is null or empty
+* Hide `Header` if the `title` is null
 * Hide `Cancel` button if the `textCancel` is null
 * Hide `Ok` button if `ok: {text: null}`
-* Hide Footer if the `Cancel` and `Ok` is hidden
+* Hide Footer if the `Cancel` and `Ok` are hidden
 
 ## License
 

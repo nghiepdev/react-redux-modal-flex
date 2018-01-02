@@ -56,7 +56,7 @@ const Header = ({ title, toggleModal, closeBtn }) =>
   );
 
 Header.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   toggleModal: PropTypes.func.isRequired,
   closeBtn: PropTypes.bool.isRequired,
 };

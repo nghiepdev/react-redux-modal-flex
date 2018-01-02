@@ -38,9 +38,9 @@ const Footer = ({
 );
 
 Footer.propTypes = {
-  textOk: PropTypes.string.isRequired,
+  textOk: PropTypes.string,
   classOk: PropTypes.string.isRequired,
-  textCancel: PropTypes.string.isRequired,
+  textCancel: PropTypes.string,
   toggleModal: PropTypes.func.isRequired,
   actionOk: PropTypes.func,
   disabledOk: PropTypes.bool.isRequired,
