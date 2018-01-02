@@ -2,7 +2,7 @@ import React from 'react';
 
 export default () => (
   <a
-    href="https://github.com/tronghiep92/react-redux-modal-flex"
+    href="https://github.com/nghiepit/react-redux-modal-flex"
     style={{
       position: 'fixed',
       top: 0,

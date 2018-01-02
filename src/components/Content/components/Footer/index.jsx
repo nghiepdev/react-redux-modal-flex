@@ -28,7 +28,7 @@ const Footer = ({
       <Button
         primary
         isDisabled={disabledOk}
-        onClick={() => actionOk()}
+        onClick={() => actionOk && actionOk()}
         className={classOk}
       >
         {textOk}
@@ -42,7 +42,7 @@ Footer.propTypes = {
   classOk: PropTypes.string.isRequired,
   textCancel: PropTypes.string.isRequired,
   toggleModal: PropTypes.func.isRequired,
-  actionOk: PropTypes.func.isRequired,
+  actionOk: PropTypes.func,
   disabledOk: PropTypes.bool.isRequired,
   className: PropTypes.string.isRequired,
 };

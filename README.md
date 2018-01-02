@@ -150,7 +150,6 @@ const initState = {
 import Modal, {
   reducer as modal,
   actions as ModalActions,
-  selectors as ModalSelectors,
 } from 'react-redux-modal-flex';
 const { toggleModal, modifyOkModal } = ModalActions;
 ```

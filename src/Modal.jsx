@@ -37,7 +37,7 @@ class Modal extends React.Component {
     closeBtn: PropTypes.bool.isRequired,
     textOk: PropTypes.string.isRequired,
     classOk: PropTypes.string.isRequired,
-    actionOk: PropTypes.func.isRequired,
+    actionOk: PropTypes.func,
     disabledOk: PropTypes.bool,
     textCancel: PropTypes.string,
     isFooter: PropTypes.bool.isRequired,
@@ -62,12 +62,12 @@ class Modal extends React.Component {
           {...this.props}
         >
           {show &&
-          is(Function, Component) && (
-            <Component
-              toggleModal={toggleModal}
-              modifyOkModal={modifyOkModal}
-            />
-          )}
+            is(Function, Component) && (
+              <Component
+                toggleModal={toggleModal}
+                modifyOkModal={modifyOkModal}
+              />
+            )}
         </Content>
       </Wrapper>
     );
