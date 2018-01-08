@@ -5,6 +5,7 @@ import styled from 'styled-components';
 const Wrapper = styled.section`
   max-width: 100%;
   padding: 0px 10px;
+  min-height: 110px;
   overflow: auto;
   > * {
     box-sizing: border-box;
