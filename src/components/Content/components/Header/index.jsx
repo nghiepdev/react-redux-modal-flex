@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 const Wrapper = styled.h4`
   position: relative;
+  flex: 1 0 auto;
   background: #fafafc;
   color: #111;
   border-bottom: 1px solid #ebebee;

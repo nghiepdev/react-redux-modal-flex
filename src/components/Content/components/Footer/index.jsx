@@ -10,6 +10,7 @@ const Wrapper = styled.footer`
   border-top: 1px solid #e5e5e9;
   display: flex;
   justify-content: flex-end;
+  flex: 1 0 auto;
 `;
 
 const Footer = ({
