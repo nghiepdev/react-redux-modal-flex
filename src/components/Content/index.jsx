@@ -21,9 +21,8 @@ const Wrapper = styled.section`
     display: flex;
     flex-direction: column;
     min-width: 320px;
-    min-height: 200px;
-    max-width: 95vw;
-    max-height: 80vh;
+    max-width: 98vw;
+    max-height: 98vh;
     background: #fff;
     border-radius: 2px;
     border: 1px solid #ebebee;
