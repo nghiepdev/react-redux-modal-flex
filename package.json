@@ -1,13 +1,11 @@
 {
   "name": "react-redux-modal-flex",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Make easy a modal/popup with Redux",
   "author": "Nghiệp<me@nghiepit.pro>",
   "homepage": "http://react-redux-modal-flex.surge.sh",
   "main": "index.min.js",
-  "files": [
-    "lib"
-  ],
+  "files": ["lib"],
   "dependencies": {
     "classnames": "^2.2.5",
     "prop-types": "^15.6.0",
@@ -17,11 +15,11 @@
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",
     "reselect": "^3.0.1",
-    "styled-components": "^2.4.0"
+    "styled-components": "^3.2.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
+    "babel-core": "6",
     "babel-loader": "^7.1.2",
     "babel-plugin-ramda": "^1.4.3",
     "babel-plugin-transform-class-properties": "^6.24.1",
@@ -29,7 +27,7 @@
     "babel-preset-react": "^6.24.1",
     "cross-env": "^5.1.3",
     "css-loader": "^0.28.7",
-    "style-loader": "^0.19.1",
+    "style-loader": "^0.20.2",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.9.7"
   },
@@ -42,9 +40,12 @@
   },
   "scripts": {
     "dev": "./node_modules/.bin/webpack-dev-server",
-    "lib": "cross-env NODE_ENV=production ./node_modules/.bin/webpack --config webpack.lib.config.js --progress --profile -p",
-    "build": "cross-env NODE_ENV=production ./node_modules/.bin/webpack --progress --profile -p",
-    "demo": "npm run build && mv bundle.js examples/ && surge examples --domain react-redux-modal-flex.surge.sh",
+    "lib":
+      "cross-env NODE_ENV=production ./node_modules/.bin/webpack --config webpack.lib.config.js --progress --profile -p",
+    "build":
+      "cross-env NODE_ENV=production ./node_modules/.bin/webpack --progress --profile -p",
+    "demo":
+      "npm run build && mv bundle.js examples/ && surge examples --domain react-redux-modal-flex.surge.sh",
     "prepublish": "npm run lib"
   },
   "repository": {
