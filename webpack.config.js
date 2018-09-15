@@ -5,7 +5,7 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    bundle: './examples/index.js',
+    bundle: './example/index.js',
   },
 
   output: {
@@ -63,7 +63,7 @@ module.exports = {
   },
 
   devServer: {
-    contentBase: './examples/',
+    contentBase: './example/',
     hot: true,
     inline: true,
     compress: true,

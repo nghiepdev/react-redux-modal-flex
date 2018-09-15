@@ -1,8 +1,8 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { pick } from 'ramda';
+import {connect} from 'react-redux';
+import {pick} from 'ramda';
 
-import { actions as ModalActions } from '../src';
+import {actions as ModalActions} from '../src';
 
 import ModalSample from './ModalSample';
 
@@ -21,8 +21,7 @@ class App extends React.Component {
                   action: () => alert('Zoom'),
                 },
               })
-            }
-          >
+            }>
             Zoom
           </button>
 
@@ -35,8 +34,7 @@ class App extends React.Component {
                   action: () => alert('Fade'),
                 },
               })
-            }
-          >
+            }>
             Fade
           </button>
 
@@ -50,8 +48,7 @@ class App extends React.Component {
                   action: () => alert('Bounce'),
                 },
               })
-            }
-          >
+            }>
             Bounce
           </button>
         </div>
@@ -67,4 +64,7 @@ class App extends React.Component {
   }
 }
 
-export default connect(null, pick(['toggleModal'], ModalActions))(App);
+export default connect(
+  null,
+  pick(['toggleModal'], ModalActions),
+)(App);
