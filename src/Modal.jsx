@@ -2,14 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import cls from 'classnames';
-import { connect } from 'react-redux';
-import { createStructuredSelector } from 'reselect';
-import { pick, is } from 'ramda';
+import {connect} from 'react-redux';
+import {createStructuredSelector} from 'reselect';
+import {pick, is} from 'ramda';
 
-import {
-  actions as ModalActions,
-  selectors as ModalSelectors,
-} from './modules';
+import {GlobalStyle} from './styled';
+import {actions as ModalActions, selectors as ModalSelectors} from './modules';
 
 import Content from './components/Content';
 
@@ -56,20 +54,21 @@ class Modal extends React.Component {
     } = this.props;
 
     return (
-      <Wrapper show={show}>
-        <Content
-          className={cls('animated', classContent, animation)}
-          {...this.props}
-        >
-          {show &&
-            is(Function, Component) && (
+      <React.Fragment>
+        <GlobalStyle />
+        <Wrapper show={show}>
+          <Content
+            className={cls('animated', classContent, animation)}
+            {...this.props}>
+            {show && is(Function, Component) && (
               <Component
                 toggleModal={toggleModal}
                 modifyOkModal={modifyOkModal}
               />
             )}
-        </Content>
-      </Wrapper>
+          </Content>
+        </Wrapper>
+      </React.Fragment>
     );
   }
 }
@@ -94,8 +93,8 @@ export default connect(
         'textCancel',
         'isFooter',
       ],
-      ModalSelectors
-    )
+      ModalSelectors,
+    ),
   ),
-  pick(['toggleModal', 'modifyOkModal'], ModalActions)
+  pick(['toggleModal', 'modifyOkModal'], ModalActions),
 )(Modal);

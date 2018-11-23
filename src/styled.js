@@ -1,7 +1,6 @@
-import { injectGlobal } from 'styled-components';
+import {createGlobalStyle} from 'styled-components';
 
-// eslint-disable-next-line
-injectGlobal`
+export const GlobalStyle = createGlobalStyle`
   .animated {
     animation-duration: 1s;
     animation-fill-mode: both;

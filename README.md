@@ -5,14 +5,18 @@ Make easy a modal/popup with Redux.
 [![NPM version](https://img.shields.io/npm/v/react-redux-modal-flex.svg)](https://www.npmjs.com/package/react-redux-modal-flex)
 [![NPM monthly download](https://img.shields.io/npm/dm/react-redux-modal-flex.svg)](https://www.npmjs.com/package/react-redux-modal-flex)
 
+:warning: This will work only with React 16.3+ :warning:
+
+If you're looking for a version for React 16.2 (for individual pages) use [1.x branch](https://github.com/nghiepit/react-redux-modal-flex/tree/1.x) branch.
+
 ## Demo
 
-[http://react-redux-modal-flex.surge.sh/](http://react-redux-modal-flex.surge.sh/)
+[https://react-redux-modal-flex.netlify.com](https://react-redux-modal-flex.netlify.com)
 
 ## Features
 
-* Responsive
-* Easy custom `animation` effect by [Animate.css](https://daneden.github.io/animate.css/)
+- Responsive
+- Easy custom `animation` effect by [Animate.css](https://daneden.github.io/animate.css/)
 
 ## Installation
 
@@ -29,8 +33,8 @@ $ yarn add react-redux-modal-flex
 `rootReducer.js`
 
 ```js
-import { combineReducers } from 'redux';
-import { reducer as modal } from 'react-redux-modal-flex';
+import {combineReducers} from 'redux';
+import {reducer as modal} from 'react-redux-modal-flex';
 import todos from './todos';
 
 export default combineReducers({
@@ -74,8 +78,8 @@ class App extends React.Component {
 Any `Container` you want to use
 
 ```jsx
-import { connect } from 'react-redux';
-import { actions as ModalActions } from 'react-redux-modal-flex';
+import {connect} from 'react-redux';
+import {actions as ModalActions} from 'react-redux-modal-flex';
 
 class LoginModal extends React.Component {
   render() {
@@ -108,8 +112,7 @@ class Auth extends React.Component {
                 action: () => alert('submit form'),
               },
             })
-          }
-        >
+          }>
           Open modal login
         </button>
       </div>
@@ -117,12 +120,15 @@ class Auth extends React.Component {
   }
 }
 
-export default connect(null, { toggleModal: ModalActions.toggleModal })(Auth);
+export default connect(
+  null,
+  {toggleModal: ModalActions.toggleModal},
+)(Auth);
 ```
 
 ## API
 
-* initState: you can overwrite default initial state
+- initState: you can overwrite default initial state
 
 ```js
 const initState = {
@@ -144,18 +150,18 @@ const initState = {
 };
 ```
 
-* API
+- API
 
 ```js
 import Modal, {
   reducer as modal,
   actions as ModalActions,
 } from 'react-redux-modal-flex';
-const { toggleModal, modifyOkModal } = ModalActions;
+const {toggleModal, modifyOkModal} = ModalActions;
 ```
 
-* `<Modal />` is component, using in our `App.js`
-* `reducer` using in our `rootReducer.js` you can custom default initial state
+- `<Modal />` is component, using in our `App.js`
+- `reducer` using in our `rootReducer.js` you can custom default initial state
 
 ```js
 export default combineReducers({
@@ -167,13 +173,13 @@ export default combineReducers({
 });
 ```
 
-* `toggleModal` and `modifyOkModal` is action
+- `toggleModal` and `modifyOkModal` is action
 
 ## Usage
 
-* Open Modal by action `toggleModal(options)`
-  * `options`: is object and look like the `initState` above
-  * Example:
+- Open Modal by action `toggleModal(options)`
+  - `options`: is object and look like the `initState` above
+  - Example:
 
 ```jsx
 ...
@@ -193,9 +199,9 @@ render() {
 ...
 ```
 
-* Close Modal `toggleModal(false)` or any value excepted object
-* Modify button `OK`: `modifyOkModal(options)` usage like `toggleModal`
-  * Example:
+- Close Modal `toggleModal(false)` or any value excepted object
+- Modify button `OK`: `modifyOkModal(options)` usage like `toggleModal`
+  - Example:
 
 ```js
 onClick={() => this.props.modifyOkModal({
@@ -204,11 +210,11 @@ onClick={() => this.props.modifyOkModal({
 })}
 ```
 
-* Hide `Header` if the `title` is null
-* Hide `Cancel` button if the `textCancel` is null
-* Hide `Ok` button if `ok: {text: null}`
-* Hide Footer if the `Cancel` and `Ok` are hidden
+- Hide `Header` if the `title` is null
+- Hide `Cancel` button if the `textCancel` is null
+- Hide `Ok` button if `ok: {text: null}`
+- Hide Footer if the `Cancel` and `Ok` are hidden
 
 ## License
 
-MIT © [Nghiệp](http://nghiepit.pro)
+MIT © [Nghiep](http://nghiepit.pro)
