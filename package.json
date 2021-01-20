@@ -2,21 +2,14 @@
   "name": "react-redux-modal-flex",
   "version": "2.0.0",
   "description": "Make easy a modal/popup with Redux",
-  "main": "./lib/index.js",
-  "files": [
-    "lib",
-    "LICENCE",
-    "README.md"
-  ],
-  "dependencies": {
-    "classnames": "^2.2.6",
-    "prop-types": "^15.6.2",
-    "ramda": "^0.26.0",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
-    "react-redux": "^5.1.1",
-    "redux": "^4.0.1",
-    "reselect": "^4.0.0"
+  "main": "./libs/index.js",
+  "scripts": {
+    "clean": "rimraf lib",
+    "dev": "webpack-dev-server",
+    "build": "cross-env NODE_ENV=production webpack --progress --profile -p",
+    "demo": "npm run build && mv bundle.js example/bundle.js",
+    "lib": "babel src -d libs --source-maps",
+    "prepublishOnly": "npm run lib"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -28,10 +21,18 @@
     "babel-preset-react": "^6.24.1",
     "cross-env": "^5.2.0",
     "css-loader": "^0.28.7",
+    "rimraf": "^2.6.2",
     "style-loader": "^0.23.1",
-    "styled-components": "^4.1.1",
     "webpack": "^3.10.0",
-    "webpack-dev-server": "^2.9.7"
+    "webpack-dev-server": "^2.9.7",
+    "classnames": "^2.2.6",
+    "prop-types": "^15.0.0 || ^16.0.0",
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0",
+    "react-redux": "^4.0.0 || ^5.0.0",
+    "redux": "^3.0.0 || ^4.0.0",
+    "reselect": "^4.0.0",
+    "styled-components": "^4.0.0"
   },
   "peerDependencies": {
     "classnames": "^2.2.6",
@@ -40,14 +41,8 @@
     "react-dom": "^16.3.0",
     "react-redux": "^4.0.0 || ^5.0.0",
     "redux": "^3.0.0 || ^4.0.0",
+    "reselect": "^4.0.0",
     "styled-components": "^4.0.0"
-  },
-  "scripts": {
-    "dev": "webpack-dev-server",
-    "build": "cross-env NODE_ENV=production webpack --progress --profile -p",
-    "demo": "npm run build && mv bundle.js example/bundle.js",
-    "lib": "babel src -d lib",
-    "prepublishOnly": "npm run lib"
   },
   "homepage": "https://github.com/nghiepit/react-redux-modal-flex",
   "repository": {
@@ -63,9 +58,8 @@
     "modal",
     "popup",
     "dialog",
-    "animate",
     "alert"
   ],
-  "author": "Nghiep <me@nghiepit.pro>",
+  "author": "Nghiep <me@nghiepit.dev>",
   "license": "MIT"
 }

@@ -1,9 +1,9 @@
-# REACT-REDUX-MODAL-FLEX
-
-Make easy a modal/popup with Redux.
+# [DEPRECATED] REACT-REDUX-MODAL-FLEX
 
 [![NPM version](https://img.shields.io/npm/v/react-redux-modal-flex.svg)](https://www.npmjs.com/package/react-redux-modal-flex)
-[![NPM monthly download](https://img.shields.io/npm/dm/react-redux-modal-flex.svg)](https://www.npmjs.com/package/react-redux-modal-flex)
+[![NPM yearly download](https://img.shields.io/npm/dy/react-redux-modal-flex.svg)](https://www.npmjs.com/package/react-redux-modal-flex)
+
+> Make easy a modal/popup with Redux.
 
 :warning: This will work only with React 16.3+ :warning:
 
@@ -33,15 +33,15 @@ $ yarn add react-redux-modal-flex
 `rootReducer.js`
 
 ```js
-import {combineReducers} from 'redux';
-import {reducer as modal} from 'react-redux-modal-flex';
-import todos from './todos';
+import { combineReducers } from "redux";
+import { reducer as modal } from "react-redux-modal-flex";
+import todos from "./todos";
 
 export default combineReducers({
   todos,
   modal: modal({
-    classContent: 'modal-content',
-    animation: 'zoomIn',
+    classContent: "modal-content",
+    animation: "zoomIn",
     duration: 200,
     mask: true,
     /* initial state, see API reference */
@@ -54,7 +54,7 @@ export default combineReducers({
 `App.js`
 
 ```jsx
-import Modal from 'react-redux-modal-flex';
+import Modal from "react-redux-modal-flex";
 
 class App extends React.Component {
   render() {
@@ -78,8 +78,8 @@ class App extends React.Component {
 Any `Container` you want to use
 
 ```jsx
-import {connect} from 'react-redux';
-import {actions as ModalActions} from 'react-redux-modal-flex';
+import { connect } from "react-redux";
+import { actions as ModalActions } from "react-redux-modal-flex";
 
 class LoginModal extends React.Component {
   render() {
@@ -108,11 +108,12 @@ class Auth extends React.Component {
             this.props.toggleModal({
               component: LoginModal,
               ok: {
-                text: 'Login',
-                action: () => alert('submit form'),
+                text: "Login",
+                action: () => alert("submit form"),
               },
             })
-          }>
+          }
+        >
           Open modal login
         </button>
       </div>
@@ -120,10 +121,7 @@ class Auth extends React.Component {
   }
 }
 
-export default connect(
-  null,
-  {toggleModal: ModalActions.toggleModal},
-)(Auth);
+export default connect(null, { toggleModal: ModalActions.toggleModal })(Auth);
 ```
 
 ## API
@@ -132,20 +130,20 @@ export default connect(
 
 ```js
 const initState = {
-  classContent: 'modal-content',
-  animation: 'zoomIn',
+  classContent: "modal-content",
+  animation: "zoomIn",
   duration: 300,
   mask: true,
   closeByMask: true,
   component: ModalDefault,
-  title: 'This is a title',
+  title: "This is a title",
   closeBtn: true,
-  textCancel: 'Cancel',
+  textCancel: "Cancel",
   ok: {
-    text: 'OK',
-    classOk: 'modal-btn-ok',
+    text: "OK",
+    classOk: "modal-btn-ok",
     disabled: false,
-    action: () => console.log('OK clicked'),
+    action: () => console.log("OK clicked"),
   },
 };
 ```
@@ -156,8 +154,8 @@ const initState = {
 import Modal, {
   reducer as modal,
   actions as ModalActions,
-} from 'react-redux-modal-flex';
-const {toggleModal, modifyOkModal} = ModalActions;
+} from "react-redux-modal-flex";
+const { toggleModal, modifyOkModal } = ModalActions;
 ```
 
 - `<Modal />` is component, using in our `App.js`
@@ -167,8 +165,8 @@ const {toggleModal, modifyOkModal} = ModalActions;
 export default combineReducers({
   todos,
   modal: modal({
-    textCancel: 'Close',
-    title: 'My default title',
+    textCancel: "Close",
+    title: "My default title",
   }),
 });
 ```
@@ -217,4 +215,4 @@ onClick={() => this.props.modifyOkModal({
 
 ## License
 
-MIT © [Nghiep](http://nghiepit.pro)
+MIT © [Nghiep](http://nghiepit.dev)
