@@ -1,7 +1,7 @@
 # [DEPRECATED] REACT-REDUX-MODAL-FLEX
 
 [![NPM version](https://img.shields.io/npm/v/react-redux-modal-flex.svg)](https://www.npmjs.com/package/react-redux-modal-flex)
-[![NPM yearly download](https://img.shields.io/npm/dy/react-redux-modal-flex.svg)](https://www.npmjs.com/package/react-redux-modal-flex)
+[![NPM monthly download](https://img.shields.io/npm/dm/react-redux-modal-flex.svg)](https://www.npmjs.com/package/react-redux-modal-flex)
 
 > Make easy a modal/popup with Redux.
 
@@ -215,4 +215,4 @@ onClick={() => this.props.modifyOkModal({
 
 ## License
 
-MIT © [Nghiep](http://nghiepit.dev)
+MIT

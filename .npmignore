@@ -1,6 +1,0 @@
-src
-examples
-.babelrc
-.editorconfig
-webpack.config.js
-bundle.js

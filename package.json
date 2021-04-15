@@ -1,8 +1,11 @@
 {
   "name": "react-redux-modal-flex",
-  "version": "2.0.1",
+  "version": "2.0.3",
   "description": "Make easy a modal/popup with Redux",
   "main": "./libs/index.js",
+  "files": [
+    "libs"
+  ],
   "scripts": {
     "clean": "rimraf lib",
     "dev": "webpack-dev-server",
